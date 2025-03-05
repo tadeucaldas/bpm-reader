@@ -15,7 +15,7 @@ export default defineConfig({
       theme_color: '#ffffff'
     },
   })],
-  base: 'bmp-reader',
+  base: '/bpm-reader',
   /*build: {
     outDir: 'docs',
     emptyOutDir: true,
