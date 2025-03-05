@@ -15,6 +15,10 @@ export default defineConfig({
       theme_color: '#ffffff'
     },
   })],
+  build: {
+    outDir: 'docs',
+    emptyOutDir: true,
+  },
   server: {
     https: {
       key: fs.readFileSync('./certs/key.pem'),
