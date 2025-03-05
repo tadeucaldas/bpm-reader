@@ -1,1 +1,0 @@
-if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/bpm-reader/sw.js', { scope: '/bpm-reader/' })})}
