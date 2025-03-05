@@ -5,7 +5,16 @@ import fs from 'fs';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue(), VitePWA()],
+  plugins: [vue(), VitePWA({
+    registerType: 'autoUpdate',
+    includeAssets: ['favicon.svg', 'robots.txt', 'apple-touch-icon.png'],
+    manifest: {
+      name: 'My Vue App',
+      short_name: 'VueApp',
+      description: 'My Vue.js Application',
+      theme_color: '#ffffff'
+    },
+  })],
   server: {
     https: {
       key: fs.readFileSync('./certs/key.pem'),
